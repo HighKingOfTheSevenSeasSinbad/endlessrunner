@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6559415496301648172}
   - component: {fileID: 5685977089561105631}
   - component: {fileID: 4128841051034108594}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SmallPlatforn
-  m_TagString: Untagged
+  m_TagString: Cleanup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

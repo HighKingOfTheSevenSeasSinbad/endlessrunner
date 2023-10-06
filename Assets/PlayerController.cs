@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject groundChecker;
     public LayerMask whatIsGround;
+    public float jumpForce = 1.0f;
 
     public float maxSpeed = 5.0f;
     bool isOnGround = false;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Create a 'float' that will be equal to the players horizontal input
         float movementValueX = Input.GetAxis("Horizontal");
 
@@ -31,5 +33,14 @@ public class PlayerController : MonoBehaviour
 
         //Check to see if the ground check object is touching the ground
         isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
-    }
+
+        if ((isOnGround == true) && (Input.GetKeyDown(KeyCode.UpArrow)))
+        {
+            Debug.Log("WeJumped");
+            playerObject.AddForce(Vector2.up*jumpForce);
+        }
+    } 
+
+
 }
+   
