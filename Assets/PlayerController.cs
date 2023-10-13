@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
 
         //Create a 'float' that will be equal to the players horizontal input
-        float movementValueX = Input.GetAxis("Horizontal");
+        float movementValueX = 1;
 
         //Change the X velocity of the Rigidbody2D to be equal to the movement value
         playerObject.velocity = new Vector2(movementValueX*maxSpeed, playerObject.velocity.y);
